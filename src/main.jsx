@@ -6,14 +6,16 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import './index.css'
-import Root from "./routes/Root";
+import Root , { loader as rootLoader } from "./routes/Root";
 import Contact from "./routes/contact";
+
 
 const router = createBrowserRouter([
   {
     path: "/",
     element:<Root />,
     errorElement: <ErrorPage />,
+    loader: rootLoader,
     children: [
       {
         path: "contacts/:contactId",

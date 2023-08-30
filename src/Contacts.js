@@ -3,7 +3,7 @@ import { matchSorter } from "match-sorter";
 import sortBy from "sort-by";
 
 export async function getContacts(query) {
-  await fakeNetwork(getContacts:${query});
+  await fakeNetwork(`getContacts:${query}`);
   let contacts = await localforage.getItem("contacts");
   if (!contacts) contacts = [];
   if (query) {
@@ -23,7 +23,7 @@ export async function createContact() {
 }
 
 export async function getContact(id) {
-  await fakeNetwork(contact:${id});
+  await fakeNetwork(`contact:${id}`);
   let contacts = await localforage.getItem("contacts");
   let contact = contacts.find(contact => contact.id === id);
   return contact ?? null;
