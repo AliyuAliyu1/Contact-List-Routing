@@ -22,7 +22,7 @@ export default function Root() {
                 aria-live="polite"
               ></div>
             </form>
-            <form method="post">
+            <form method="post" onSubmit={(e)=>e.preventDefault()}>
               <button type="submit">New</button>
             </form>
           </div>
