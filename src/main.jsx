@@ -12,6 +12,7 @@ import './index.css'
 import Root , { loader as rootLoader, action as rootAction,} from "./routes/Root";
 import Contact, {
   loader as contactLoader,
+  action as contactAction,
 } from "./routes/contact";
 
 import { action as destroyAction } from "./routes/destroy";
@@ -32,6 +33,7 @@ const router = createBrowserRouter([
         path: "contacts/:contactId",
         element: <Contact />,
         loader: contactLoader,
+        action: contactAction,
       },
       {
         path: "contacts/:contactId/edit",
